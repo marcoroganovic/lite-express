@@ -1,4 +1,4 @@
-var app = require("./index")();
+var app = require("../index")();
 
 const PORT = process.env.PORT || 8080;
 
