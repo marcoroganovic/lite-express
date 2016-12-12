@@ -1,0 +1,22 @@
+{
+  "name": "light-express",
+  "version": "0.0.0",
+  "description": "express-like framework built for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoroganovic/light-express.git"
+  },
+  "author": "Marco Roganovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcoroganovic/light-express/issues"
+  },
+  "homepage": "https://github.com/marcoroganovic/light-express#readme",
+  "dependencies": {
+    "ejs": "^2.5.5"
+  }
+}
