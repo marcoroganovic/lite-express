@@ -6,16 +6,14 @@ app.get("/", (req, res) => {
   res.send("Homepage");
 });
 
-app.get("/name", (req, res) => {
-  var { name, lastName } = req.params;
-  name = name || "John"
-  lastName = lastName || "Doe";
-
-  res.send(`${name} ${lastName}`);
-});
 
 app.get("/about", (req, res) => {
-  res.render("about.html");
+  var data = {
+    name: req.params.name || "John",
+    lastName: req.params.lastName || "Doe"
+  }
+
+  res.render("about", data);
 });
 
 app.get("/contact", (req, res) => {
