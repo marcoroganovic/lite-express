@@ -4,18 +4,15 @@ var micro = require("./index"),
 const PORT = process.env.PORT || 8080;
 
 app.get("/", function(req, res) {
-  res.writeHead(200, {
-    "Content-Type": "text/html"
-  });
-  res.end("Homepage");
+  res.send("Hello");
 });
 
-
 app.get("/contact", function(req, res) {
-  res.writeHead(200, {
-    "Content-Type": "text/html"
-  });
-  res.end("/contact");
+  res.send("Contact page");
+});
+
+app.get("/redirect", function(req, res) {
+  res.redirect("/");
 });
 
 app.listen(PORT);
