@@ -17,11 +17,4 @@ app.get("/contact", function(req, res) {
   res.end("/contact");
 });
 
-app.get("/contact", (req, res) => {
-  res.writeHead(200, {
-    "Content-Type": "text/html"
-  });
-  res.end("/contact with arrow function callbakc");
-});
-
 app.listen(PORT);
