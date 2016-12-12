@@ -3,12 +3,16 @@ var micro = require("./index"),
 
 const PORT = process.env.PORT || 8080;
 
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
   res.send("Hello");
 });
 
-app.get("/contact", function(req, res) {
+app.get("/contact", (req, res) => {
   res.send("Contact page");
+});
+
+app.get("/json", (req, res) => {
+  res.json({name: "John", lastName: "Doe"});
 });
 
 app.get("/redirect", function(req, res) {
