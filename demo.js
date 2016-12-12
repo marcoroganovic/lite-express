@@ -10,6 +10,7 @@ app.get("/", function(req, res) {
   res.end("Homepage");
 });
 
+
 app.get("/contact", function(req, res) {
   res.writeHead(200, {
     "Content-Type": "text/html"
