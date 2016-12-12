@@ -15,7 +15,7 @@ app.get("/json", (req, res) => {
   res.json({name: "John", lastName: "Doe"});
 });
 
-app.get("/redirect", function(req, res) {
+app.get("/redirect", (req, res) => {
   res.redirect("/");
 });
 
