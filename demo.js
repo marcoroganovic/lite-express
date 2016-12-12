@@ -4,6 +4,7 @@ var micro = require("./index"),
 const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
+  console.log(req.params);
   res.send("Hello");
 });
 
