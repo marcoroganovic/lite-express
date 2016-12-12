@@ -1,5 +1,4 @@
-var micro = require("./index"),
-    app = micro();
+var app = require("./index")();
 
 const PORT = process.env.PORT || 8080;
 
@@ -8,7 +7,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/name", (req, res) => {
-  res.send(req.params.name + " " + req.params.lastName);
+  var { name, lastName } = req.params;
+  name = name || "John"
+  lastName = lastName || "Doe";
+
+  res.send(`${name} ${lastName}`);
+});
+
+app.get("/about", (req, res) => {
+  res.render("about.html");
 });
 
 app.get("/contact", (req, res) => {
