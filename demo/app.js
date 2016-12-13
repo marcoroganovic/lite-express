@@ -2,6 +2,13 @@ var app = require("../index")();
 
 const PORT = process.env.PORT || 8080;
 
+function logger(req, res, next) {
+  console.log(req.method, req.url)
+  next();
+}
+
+app.use(logger);
+
 app.get("/", (req, res) => {
   res.send("Homepage");
 });
