@@ -13,7 +13,6 @@ app.get("/", (req, res) => {
   res.send("Homepage");
 });
 
-
 app.get("/about", (req, res) => {
   var data = {
     name: req.params.name || "John",
@@ -23,9 +22,6 @@ app.get("/about", (req, res) => {
   res.render("about", data);
 });
 
-app.get("/contact", (req, res) => {
-  res.send("Contact page");
-});
 
 app.get("/json", (req, res) => {
   res.json({name: "John", lastName: "Doe"});
