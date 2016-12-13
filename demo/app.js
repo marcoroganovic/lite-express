@@ -1,4 +1,7 @@
-var app = require("../index")();
+var micro = require("../index"),
+    serveStatic = require("./static");
+
+var app = micro();
 
 const PORT = process.env.PORT || 8080;
 
@@ -8,6 +11,7 @@ function logger(req, res, next) {
 }
 
 app.use(logger);
+app.use(serveStatic("public"));
 
 app.get("/", (req, res) => {
   res.send("Homepage");
