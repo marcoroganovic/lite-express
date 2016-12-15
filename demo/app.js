@@ -20,7 +20,10 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   var data = {
     name: req.params.name || "John",
-    lastName: req.params.lastName || "Doe"
+    lastName: req.params.lastName || "Doe",
+    pageTitle: function() {
+      return this.name + " " + this.lastName
+    }
   }
 
   res.render("about", data);
@@ -28,7 +31,10 @@ app.get("/about", (req, res) => {
 
 
 app.get("/json", (req, res) => {
-  res.json({name: "John", lastName: "Doe"});
+  res.json({
+    name: "John", 
+    lastName: "Doe"
+  });
 });
 
 app.get("/redirect", (req, res) => {
