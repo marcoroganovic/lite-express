@@ -41,4 +41,8 @@ app.get("/redirect", (req, res) => {
   res.redirect("/");
 });
 
+app.route("GET", "/custom-method", function(req, res) {
+  res.send("Custom HTTP method");
+});
+
 app.listen(PORT);
